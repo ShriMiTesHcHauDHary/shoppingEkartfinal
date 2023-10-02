@@ -9,11 +9,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer().any()) // HERE
 const mongoose = require('mongoose')
 
-mongoose.connect("mongodb+srv://shradha_24:Ourcloudy007@cluster0.tovfx.mongodb.net/group26Database?retryWrites=true&w=majority", 
+mongoose.connect("mongodb+srv://miteshchaudhary:aA0mvD0zhSy2FDm9@cluster0.xbauynt.mongodb.net/", 
 { useNewUrlParser: true })
     .then(() => console.log('mongodb Rock n Roll on 3000'))
     .catch(err => console.log(err))
-   
+
 
 app.use('/', route);
 
