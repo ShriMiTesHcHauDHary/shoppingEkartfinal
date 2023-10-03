@@ -11,6 +11,7 @@ const addToCart = async function (req, res) {
 
 
 
+
         if (!productId) {
             return res.status(400).send({ status: false, message: "Provide productId" })
         }
@@ -73,6 +74,7 @@ const addToCart = async function (req, res) {
                             findCart.items[i].quantity = findCart.items[i].quantity + quantity
                             findCart.totalPrice = (findProduct.price * quantity) + findCart.totalPrice
                             findCart.totalItems = findCart.items.length
+                        
                             findCart.save()
                             return res.status(200).send({ status: true, message: "product added to cart", data: findCart })
                         }
